@@ -18,6 +18,12 @@ const App = () => {
       setArmy([...army, bot]);
     }
   };
+  
+  // Remove the bot from the army
+  const releaseFromArmy = (bot) => {
+    const updatedArmy = army.filter((b) => b.id !== bot.id);
+    setArmy(updatedArmy);
+  };
 
 };
 
