@@ -8,3 +8,8 @@
   h2 {
     color: #333;
   }
+  ol {
+    list-style-type: none;
+    padding: 0;
+  }
+  
