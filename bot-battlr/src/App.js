@@ -7,7 +7,7 @@ const App = () => {
   const [army, setArmy] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/bots') // Fetch bots from the backend API.
+    fetch(''https://my-json-server.typicode.com/philipmuhoro/Phase-2-Code-Challenge-Bot-Battlr/bots'') // Fetch bots from the backend API.
       .then((response) => response.json())
       .then((data) => setBots(data))
       .catch((error) => console.error('Error fetching bots', error));
@@ -26,7 +26,7 @@ const App = () => {
   };
  // Remove the bot from the backend API
  const dischargeBot = (botId) => {
-  fetch(`http://localhost:3000/bots${botId}`, {
+  fetch(`'https://my-json-server.typicode.com/philipmuhoro/Phase-2-Code-Challenge-Bot-Battlr/bots'${botId}`, {
     method: 'DELETE',
   })
     .then((response) => response.json())
