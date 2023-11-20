@@ -26,3 +26,9 @@
     font-size: 14px;
     cursor: pointer;
   }
+   /* Responsive design for small screens */
+   @media only screen and (max-width: 768px) {
+    .BotCollection {
+      width: 100%;
+    }
+  }
