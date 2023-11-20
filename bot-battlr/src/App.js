@@ -24,7 +24,19 @@ const App = () => {
     const updatedArmy = army.filter((b) => b.id !== bot.id);
     setArmy(updatedArmy);
   };
-
+ // Remove the bot from the backend API
+ const dischargeBot = (botId) => {
+  fetch(`http://localhost:3000/bots${botId}`, {
+    method: 'DELETE',
+  })
+    .then((response) => response.json())
+    .then(() => {
+      // Remove the bot from the army
+      const updatedArmy = army.filter((b) => b.id !== botId);
+      setArmy(updatedArmy);
+    })
+    .catch((error) => console.error('Error discharging bot', error));
+};
 };
 
 export default App;
