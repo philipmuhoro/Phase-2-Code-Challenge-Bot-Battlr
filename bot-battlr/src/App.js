@@ -12,6 +12,12 @@ const App = () => {
       .then((data) => setBots(data))
       .catch((error) => console.error('Error fetching bots', error));
   }, []);
+  // Check if the bot is not already in the army, only selected once
+  const addToArmy = (bot) => {
+    if (!army.find((b) => b.id === bot.id)) {
+      setArmy([...army, bot]);
+    }
+  };
 
 };
 
