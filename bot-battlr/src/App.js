@@ -37,6 +37,12 @@ const App = () => {
     })
     .catch((error) => console.error('Error discharging bot', error));
 };
+return (
+  <div>
+    <BotCollection bots={bots} onAddToArmy={addToArmy} />
+    <YourBotArmy army = {army} onReleaseFromArmy={releaseFromArmy} onDischarge={dischargeBot}/>
+  </div>
+);
 };
 
 export default App;
