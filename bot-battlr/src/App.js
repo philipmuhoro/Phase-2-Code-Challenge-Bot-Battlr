@@ -7,7 +7,7 @@ const App = () => {
   const [army, setArmy] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/bots') // Fetch bots from the backend API.
+    fetch('https://mock-4oke.onrender.com/bots') // Fetch bots from the backend API.
       .then((response) => response.json())
       .then((data) => setBots(data))
       .catch((error) => console.error('Error fetching bots', error));
@@ -26,7 +26,7 @@ const App = () => {
   };
  // Remove the bot from the backend API
  const dischargeBot = (botId) => {
-  fetch(`http://localhost:3000/bots${botId}`, {
+  fetch(`https://mock-4oke.onrender.com/bots${botId}`, {
     method: 'DELETE',
   })
     .then((response) => response.json())
